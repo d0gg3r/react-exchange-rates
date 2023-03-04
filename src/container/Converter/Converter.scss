@@ -1,0 +1,74 @@
+@use '../../scss/utils';
+
+.converter {
+  background: #000000;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.blob {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: fit-content;
+}
+
+.blob-1 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 16rem;
+  height: 16rem;
+  background: url('https://disgustingmen.com/wp-content/uploads/2022/11/fart-proudly-5.jpg')
+    no-repeat 15% 10%;
+  background-size: cover;
+  animation: animate-blob 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.blob-2 {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  width: 14rem;
+  height: 14rem;
+  background: url('https://previews.123rf.com/images/niserin/niserin1502/niserin150200005/36109994-queen-elizabeth-ii-portrait-on-50-pound-sterling-banknote-british-currency.jpg')
+    no-repeat 50% 50%;
+  background-size: cover;
+  animation: animate-blob 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.converter__container {
+  border: 1px solid rgb(124, 241, 120);
+  padding: 4rem 2rem;
+  flex: 2;
+  gap: 2rem;
+}
+
+.equals {
+  font-family: utils.$font-grotesk;
+  font-size: 2rem;
+  color: rgb(124, 241, 120);
+}
+
+.blob-3 {
+  position: absolute;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  bottom: 5%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  background-size: cover;
+  animation: animate-blob 4s ease-in-out infinite;
+  animation-delay: 1s;
+}

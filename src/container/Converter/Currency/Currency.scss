@@ -1,0 +1,32 @@
+@use '../../../scss/utils';
+
+.currency {
+  font-family: utils.$font-gloock;
+  color: rgb(124, 241, 120);
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(124, 241, 120);
+  color: rgb(124, 241, 120);
+  padding: 0.5rem 0;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+
+  &::placeholder {
+    font-family: utils.$font-grotesk;
+    font-size: 1rem;
+    color: rgb(124, 241, 120);
+  }
+}
+
+select {
+  font-family: utils.$font-grotesk;
+  background: transparent;
+  color: rgb(124, 241, 120);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,14 @@
+a {
+  color: unset;
+  // border-bottom: 0.1px solid black;
+  text-decoration: underline;
+  transition: all 150ms ease-in-out;
+}
+
+a:hover {
+  -moz-transform: skew(-16deg, 0deg);
+  -webkit-transform: skew(-16deg, 0deg);
+  -o-transform: skew(-16deg, 0deg);
+  -ms-transform: skew(-16deg, 0deg);
+  transform: skew(-16deg, 0deg);
+}
