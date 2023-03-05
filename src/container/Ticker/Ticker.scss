@@ -1,0 +1,35 @@
+@use '../../scss/utils';
+
+@keyframes ticker {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(124, 241, 120);
+}
+
+.ticker-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  line-height: 1;
+  padding: 10px 0;
+  animation: ticker 50s linear infinite;
+  background: transparent;
+  color: rgb(124, 241, 120);
+  font-family: utils.$font-grotesk;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}

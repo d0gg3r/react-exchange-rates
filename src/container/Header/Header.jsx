@@ -1,11 +1,23 @@
 import React from 'react'
+import { fetchData } from '../../fetchData'
 import './Header.scss'
 
-const header = () => {
+const Header = () => {
   const currentDateTime = new Date()
   const day = currentDateTime.getDate()
   const month = currentDateTime.getMonth() + 1
   const year = currentDateTime.getFullYear()
+  const [data, setData] = React.useState([])
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const result = await fetchData()
+      const usdToUah = (result.rates.USD * result.rates.UAH).toFixed(2)
+      const eurToUah = (usdToUah / result.rates.EUR).toFixed(2)
+      setData([usdToUah, eurToUah])
+    }
+    getData()
+  })
 
   return (
     <div className="header section__padding flex__center wrapper">
@@ -18,8 +30,8 @@ const header = () => {
           </h1>
         </div>
         <div className="header__currency">
-          <h3>USD - 40₴ </h3>
-          <h3>EUR - 40₴ </h3>
+          <h3>USD - {data[0]}₴ </h3>
+          <h3>EUR - {data[1]}₴ </h3>
           <p>
             Last update {day}/{month}/{year}
           </p>
@@ -31,4 +43,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header

@@ -1,8 +1,15 @@
 @use '../../scss/utils';
+@use '../../scss/globals';
 
-.converter {
-  background: #000000;
+main {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+}
+
+.converter__wrapper {
+  flex: 3;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -46,7 +53,7 @@
 }
 
 .converter__container {
-  border: 1px solid rgb(124, 241, 120);
+  border: 1px solid globals.$green-neon;
   padding: 4rem 2rem;
   flex: 2;
   gap: 2rem;
@@ -55,7 +62,7 @@
 .equals {
   font-family: utils.$font-grotesk;
   font-size: 2rem;
-  color: rgb(124, 241, 120);
+  color: globals.$green-neon;
 }
 
 .blob-3 {
@@ -71,4 +78,62 @@
   background-size: cover;
   animation: animate-blob 4s ease-in-out infinite;
   animation-delay: 1s;
+}
+
+@media screen and (max-width: 1090px) {
+  .blob-1 {
+    top: 10%;
+    width: 14rem;
+
+    height: 14rem;
+  }
+
+  .blob-2 {
+    width: 12rem;
+    height: 12rem;
+    top: 65%;
+  }
+
+  .blob-3 {
+    left: 35%;
+    bottom: 10%;
+  }
+
+  .converter__container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .blob-1 {
+    top: 7%;
+  }
+
+  .blob-2 {
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .blob-1 {
+    width: 12rem;
+    height: 12rem;
+    top: 9%;
+    left: 25%;
+  }
+
+  .blob-2 {
+    width: 10rem;
+    height: 10rem;
+    top: 75%;
+    left: 30%;
+  }
+
+  .converter__container {
+    padding: 2rem 1rem;
+  }
+  .blob {
+    flex: 0.1;
+  }
 }

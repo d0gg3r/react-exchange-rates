@@ -1,15 +1,17 @@
 @use '../../../scss/utils';
+@use '../../../scss/globals';
 
 .currency {
   font-family: utils.$font-gloock;
-  color: rgb(124, 241, 120);
+  color: globals.$green-neon;
+  border-bottom: 1px solid globals.$green-neon;
 }
 
 input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgb(124, 241, 120);
-  color: rgb(124, 241, 120);
+  border-radius: 0;
+  color: globals.$green-neon;
   padding: 0.5rem 0;
   margin-right: 0.5rem;
   font-size: 1rem;
@@ -18,15 +20,17 @@ input {
   &::placeholder {
     font-family: utils.$font-grotesk;
     font-size: 1rem;
-    color: rgb(124, 241, 120);
+    color: globals.$green-neon;
   }
 }
 
 select {
   font-family: utils.$font-grotesk;
+  padding: 0.5rem 0;
   background: transparent;
-  color: rgb(124, 241, 120);
+  color: globals.$green-neon;
   font-size: 1rem;
   border: none;
+  border-radius: 0;
   outline: none;
 }
